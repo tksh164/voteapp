@@ -1,0 +1,48 @@
+﻿<div class="area-header">
+    <h1 class="h1 header-primary">EVENT NAME</h1>
+</div>
+
+<div class="container-fluid">
+    <div ng-show="message !== ''" class="mesg-primary">{{message}}</div>
+
+    <div ng-init="initTeams()" class="row-fluid">
+
+        <span ng-repeat-start="team in teams"></span>
+
+        <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="area-team-img">
+                <img src="{{team.ImageUri}}" class="img-responsive team-img" />
+                <div class="area-team-name">
+                    <h2 class="h2 team-name superimposed-text">{{team.TeamName}}</h2>
+                    <div class="superimposed-text">{{team.TeamMember}}</div>
+                </div>
+            </div>
+            <div class="area-score">
+                <uib-rating ng-model="team.Score" max="team.MaxScore" ng-change="updateTeamScore(team)" class="score-star"></uib-rating>
+                <span class="label label-success label-score">{{team.Score}}</span>
+                <!--<button type="button" ng-click="resetTeamScore(team)" class="btn btn-danger btn-reset-score">リセット</button>-->
+                <div ng-show="team.message !== ''">{{team.message}}</div>
+            </div>
+            <div>
+                <div><a ng-click="team.isDescriptionCollapsed = !team.isDescriptionCollapsed" href="javascript:;">プロジェクト概要...</a></div>
+                <p uib-collapse="team.isDescriptionCollapsed" class="text-description">{{team.Description}}</p>
+            </div>
+        </div>
+
+        <div class="vertical-spacer visible-xs-block"></div>
+
+        <div ng-if="($index + 1) % 2 === 0" class="clearfix visible-sm-block"></div>
+        <div ng-if="($index + 1) % 2 === 0" class="vertical-spacer visible-sm-block"></div>
+
+        <div ng-if="($index + 1) % 3 === 0" class="clearfix visible-md-block"></div>
+        <div ng-if="($index + 1) % 3 === 0" class="vertical-spacer visible-md-block"></div>
+
+        <div ng-if="($index + 1) % 4 === 0" class="clearfix visible-lg-block"></div>
+        <div ng-if="($index + 1) % 4 === 0" class="vertical-spacer visible-lg-block"></div>
+
+        <span ng-repeat-end></span>
+
+    </div>
+</div>
+
+<div class="area-footer">EVENT COMMITTY</div>

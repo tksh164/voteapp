@@ -1,0 +1,93 @@
+﻿body {
+    background-color: #000;
+}
+
+.area-view {
+    background-color: #fff;
+}
+
+.area-header {
+    margin-bottom:1.5em;
+    padding: 0.8em;
+    color: #fff;
+    text-align: center;
+    background-color: #e50e20;
+}
+
+.header-primary {
+    margin: 0;
+    padding: 0;
+    font-size: 2em;
+    font-family: Meiryo, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.area-footer {
+    margin-top: 2em;
+    padding: 0.3em;
+    color: #fff;
+    text-align: center;
+    background-color: #000;
+}
+
+.mesg-primary {
+    height: 500px;
+    padding: 1em;
+    text-align: center;
+}
+
+.area-team-img {
+    position: relative;
+}
+
+.team-img {
+    border: solid 1px #ccc;
+}
+
+.area-team-name {
+    position: absolute;
+    bottom: 0px;
+    padding: 1em;
+}
+
+.superimposed-text {
+    color: #fff;
+    text-shadow: 1px 1px 1px #000, -1px 1px 1px #000, 1px -1px 1px #000, -1px -1px 1px #000;
+}
+
+.team-name {
+    font-weight: bold;
+    font-family: Meiryo, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.team-member {
+}
+
+.area-score {
+    padding: 0.5em 0 0.5em 0;
+}
+
+.score-star {
+    color: #f0ad4e;
+    font-size: xx-large;
+    vertical-align: middle;
+}
+
+.label-score {
+    font-size: x-large;
+    vertical-align: middle;
+}
+
+.btn-reset-score {
+    margin-top: 4px;
+    vertical-align: middle;
+    float: right;
+}
+
+.text-description {
+    font-family: Meiryo, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    white-space: pre-line;
+}
+
+.vertical-spacer {
+    padding: 1em;
+}
